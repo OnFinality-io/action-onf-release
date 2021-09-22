@@ -32,7 +32,7 @@ const fs = require('fs');
 
     const platform = getPlatform()
     // console.info(`${platform}`)
-    const URL_VERSION = "https://raw.githubusercontent.com/OnFinality-io/onf-cli/feature/networkV2/VERSION"
+    const URL_VERSION = "https://raw.githubusercontent.com/OnFinality-io/onf-cli/master/VERSION"
 
 
     const version = await doRequest(URL_VERSION);
