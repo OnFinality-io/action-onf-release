@@ -1,0 +1,47 @@
+# action.yml
+name: 'Infinality release'
+description: 'Greet someone and record the time'
+inputs:
+  onf-workspace-id: 
+    description: 'Workspace id.'
+    required: true
+  onf_access-key:  
+    description: 'Access key.'
+    required: true
+  onf-secret-key:  
+    description: 'Secret key.'
+    required: true
+  onf-network-key:  
+    description: 'Network key'
+    required: true
+  onf-sub-command:  
+    description: 'node or image'
+    required: true
+  onf-action:  
+    description: '`upgrade` for node or `add` for image'
+    required: true
+  image-version:  
+    description: 'Who to greet'
+    required: true
+  percent:  
+    description: 'Who to greet'
+    required: false
+# outputs:
+#   time: # id of output
+#     description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'src/index.js'
+# runs:
+#   using: 'docker'
+#   image: 'Dockerfile'
+#   args:
+#     - ${{ inputs.onf-access-key }}
+#     - ${{ inputs.onf-secret-key }}
+#     - ${{ inputs.onf-workspace-id }}
+#     - ${{ inputs.onf-network-key }}
+#     - ${{ inputs.onf-sub-command }}
+#     - ${{ inputs.onf-action }}
+#     - ${{ inputs.image-version }}
+#     - ${{ inputs.percent }}
+  
