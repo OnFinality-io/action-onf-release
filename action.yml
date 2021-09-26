@@ -1,6 +1,6 @@
 # action.yml
-name: 'Infinality release'
-description: 'Greet someone and record the time'
+name: 'Onfinality release'
+description: 'Update your docker image version to Onfinality platform through Github Action.'
 inputs:
   onf-workspace-id: 
     description: 'Workspace id.'
@@ -21,10 +21,10 @@ inputs:
     description: '`upgrade` for node or `add` for image'
     required: true
   image-version:  
-    description: 'Who to greet'
+    description: 'Docker image tags'
     required: true
   percent:  
-    description: 'Who to greet'
+    description: 'Batch update the percentage of node image version. Only used on the node command.'
     required: false
 # outputs:
 #   time: # id of output

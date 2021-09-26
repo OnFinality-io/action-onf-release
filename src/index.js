@@ -11,9 +11,6 @@ const fs = require('fs');
 
 (async () => {
   try {
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
-    console.log(`Hello ${nameToGreet}!`);
 
     const onf_access_key = core.getInput('onf-access-key')
     const onf_secret_key = core.getInput('onf-secret-key')
@@ -65,19 +62,19 @@ const fs = require('fs');
       await exec.exec(`chmod 773 ${cmd_onf}`);
     }
 
-    let letsubCMd = `${onf_sub_command} ${onf_action} -n ${onf_network_key} -v ${image_version}`
+    let subCMD = `${onf_sub_command} ${onf_action} -n ${onf_network_key} -v ${image_version}`
 
     switch (onf_sub_command) {
       case 'image' :
         break;
       case 'node' :
         if(percent){
-          letsubCMd  = `${letsubCMd} --percent ${percent}`
+          subCMD  = `${subCMD} --percent ${percent}`
         }
         break;
     }
 
-    const n = await exec.exec(`./${cmd_onf}`,letsubCMd.split(" "));
+    const n = await exec.exec(`./${cmd_onf}`,subCMD.split(" "));
     // const n = await exec.exec(`./${cmd_onf}`,["node","list"]);
     // console.log(`Exec payload: ${n}`);
     

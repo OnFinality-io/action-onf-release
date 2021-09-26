@@ -30,9 +30,9 @@ jobs:
 |Parameter|**Mandatory**/**Optional**  | Description |
 |--|--|--|
 | onf-workspace-id | **Mandatory** | Your workspace id on Onfinality platform. |
-| onf_access-key | **Mandatory** | Access key.How to get: [https://app.onfinality.io/account](https://app.onfinality.io/account) |
+| onf-access-key | **Mandatory** | Access key.How to get: [https://app.onfinality.io/account](https://app.onfinality.io/account) |
 | onf-secret-key | **Mandatory** | Secret key.How to get: https://app.onfinality.io/account |
-| onf-network-key | **Mandatory** | How to get `onf network-spec list`|
+| onf-network-key | **Mandatory** | How to get: `onf network-spec list`|
 | onf-sub-command | **Mandatory** | `image` update image version of network.  `node` batch release node's image|
 | onf-action | **Mandatory** |  Action `add` for image command. Action `upgrade` for node command.|
 | image-version | **Mandatory** | Image tags on dockerhub. This must be public |
