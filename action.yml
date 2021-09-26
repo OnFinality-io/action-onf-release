@@ -5,7 +5,7 @@ inputs:
   onf-workspace-id: 
     description: 'Workspace id.'
     required: true
-  onf_access-key:  
+  onf-access-key:  
     description: 'Access key.'
     required: true
   onf-secret-key:  
